@@ -2,7 +2,6 @@ import {
   ThemeProvider,
   createTheme,
   StyledEngineProvider,
-  responsiveFontSizes,
 } from "@mui/material/styles";
 
 let theme = createTheme({
@@ -19,8 +18,8 @@ let theme = createTheme({
       secondary2: "#292929",
     },
     background: {
-      default: "#245852",
-      paper: "#FFFFFF",
+      default: "#FFFFFF",
+      paper: "#245852",
     },
   },
   breakpoints: {
@@ -41,38 +40,34 @@ let theme = createTheme({
     MuiButton: {
       styleOverrides: {
         text: {
+          fontFamily: "Lato",
           fontWeight: 500,
-          fontSize: "20px",
-          lineHeight: "24px",
           color: "#292929",
-          width: "61px",
-          height: "24px",
+          wordWrap: "none",
         },
         containedSizeSmall: {
-          backgroundColor: theme.palette.primary.main,
-          border: `1px solid ${theme.palette.primary.main}`,
+          fontFamily: "Lato",
+          fontWeight: 400,
+          wordWrap: "none",
+          border: "1px solid #01996D",
           borderRadius: "4px",
           width: "183px",
           height: "51px",
-          fontFamily: "lato",
-          fontWeight: 400,
           fontSize: "20px",
           lineHeight: "25px",
         },
         containedSizeMedium: {
-          backgroundColor: theme.palette.primary.main,
-          border: `1px solid ${theme.palette.primary.main}`,
+          border: "1px solid #01996D",
           borderRadius: "4px",
           width: "227px",
           height: "65px",
-          fontFamily: "lato",
+          fontFamily: "Lato",
           fontWeight: 400,
           fontSize: "20px",
           lineHeight: "25px",
         },
         containedSizeLarge: {
-          backgroundColor: theme.palette.primary.main,
-          border: `1px solid ${theme.palette.primary.main}`,
+          border: "1px solid #01996D",
           borderRadius: "4px",
           width: "240px",
           height: "65px",
@@ -218,8 +213,6 @@ let theme = createTheme({
     },
   },
 });
-
-theme = responsiveFontSizes(theme);
 
 const StyleProvider = (props) => {
   return (
